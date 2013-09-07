@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: caterpillar_datbase_production
+  database: HEROKU_POSTGRESQL_MAROON
   pool: 5
   timeout: 5000

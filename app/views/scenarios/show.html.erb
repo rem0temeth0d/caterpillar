@@ -1,0 +1,25 @@
+<h1> Saved Scenario </h1>
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Feature:</b>
+  <%= @scenario.feature %>
+</p>
+
+<p>
+  <b>Scenario:</b>
+  <%= @scenario.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @scenario.status %>
+</p>
+
+<p>
+  <b>Assignee:</b>
+  <%= @scenario.assignee %>
+</p>
+
+
+<%= link_to 'Edit', edit_scenario_path(@scenario) %> |
+<%= link_to 'Back', scenarios_path %>

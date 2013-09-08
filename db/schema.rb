@@ -11,7 +11,47 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907192419) do
+ActiveRecord::Schema.define(:version => 20130908001623) do
+
+  create_table "scenario", :force => true do |t|
+    t.string   "name"
+    t.string   "feature"
+    t.string   "status"
+    t.string   "assignee"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "scenarios", :force => true do |t|
+    t.string   "name"
+    t.string   "feature"
+    t.string   "status"
+    t.string   "assignee"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "testcase", :force => true do |t|
+    t.string   "name"
+    t.string   "status"
+    t.string   "assignee"
+    t.boolean  "somethingChanged"
+    t.boolean  "flagged"
+    t.integer  "scenario"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "testcases", :force => true do |t|
+    t.string   "name"
+    t.string   "status"
+    t.string   "assignee"
+    t.boolean  "somethingChanged"
+    t.boolean  "flagged"
+    t.integer  "scenario"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

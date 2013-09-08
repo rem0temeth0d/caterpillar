@@ -1,0 +1,31 @@
+<h1>Caterpillar: Collaborative Test Case Design Portal for Test Teams</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Scenario</th>
+    <th>Feature</th>
+    <th>Status</th>
+    <th>Assignee</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scenarios.each do |scenario| %>
+  <tr>
+    <td><%= scenario.id %></td>
+    <td><%= scenario.name %></td>
+    <td><%= scenario.feature %></td>
+    <td><%= scenario.status %></td>
+    <td><%= link_to scenario.assignee,user_path(scenario.assignee_id) %></td>
+    <td><%= link_to 'Show', scenario %></td>
+    <td><%= link_to 'Edit', edit_scenario_path(scenario) %></td>
+    <td><%= link_to 'Destroy', scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scenario', new_scenario_path %>

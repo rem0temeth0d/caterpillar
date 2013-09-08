@@ -6,6 +6,7 @@ gem 'rails', '3.2.14'
 
 group :development do
 	gem 'sqlite3','1.3.7'
+	gem 'rspec-rails'
 end 
 
 
@@ -22,4 +23,10 @@ gem 'jquery-rails', '~> 2.2.1'
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+end
+
+group :test do
+	gem 'rspec'
+	gem 'sqlite3','1.3.7'
+	gem 'rspec-rails'
 end

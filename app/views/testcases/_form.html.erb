@@ -1,0 +1,41 @@
+<%= form_for(@testcase) do |f| %>
+  <% if @testcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testcase.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @testcase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :scenario %><br />
+    <%= f.select :scenarios_id,@scenarios %>
+  </div>
+  <div class="field">
+    <%= f.label "Test Case" %><br />
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status,@testcase.status_options %>
+  </div>
+  <div class="field">
+    <%= f.label :assignee %><br />
+    <%= f.select :assignee,@userNames %>
+  </div>
+  <div class="field">
+    <%= f.label "Something Changed" %><br />
+    <%= f.check_box :somethingChanged %>
+  </div>
+  <div class="field">
+    <%= f.label "Flagged" %><br />
+    <%= f.check_box :flagged %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Ok" %>
+    <%= link_to "Cancel", testcases_path %>
+  </div>
+<% end %>

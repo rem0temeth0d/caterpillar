@@ -11,35 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908001623) do
-
-  create_table "scenario", :force => true do |t|
-    t.string   "name"
-    t.string   "feature"
-    t.string   "status"
-    t.string   "assignee"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130908213758) do
 
   create_table "scenarios", :force => true do |t|
-    t.string   "name"
+    t.text     "name",       :limit => 255
     t.string   "feature"
     t.string   "status"
     t.string   "assignee"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "testcase", :force => true do |t|
-    t.string   "name"
-    t.string   "status"
-    t.string   "assignee"
-    t.boolean  "somethingChanged"
-    t.boolean  "flagged"
-    t.integer  "scenario"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "testcases", :force => true do |t|
@@ -48,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20130908001623) do
     t.string   "assignee"
     t.boolean  "somethingChanged"
     t.boolean  "flagged"
-    t.integer  "scenario"
+    t.integer  "scenarios_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

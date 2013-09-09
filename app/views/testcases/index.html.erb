@@ -1,0 +1,34 @@
+<h2>Test Cases</h2>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Test Case</th>
+    <th>Scenario</th>
+    <th>Status</th>
+    <th>Assignee</th>
+    <th>Something Changed</th>
+    <th>Flagged</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testcases.each do |testcase| %>
+  <tr>
+    <td><%= testcase.id %></td>
+    <td><%= testcase.name %></td>
+    <td><%= testcase.scenarios_id %></td>
+    <td><%= testcase.status %></td>
+    <td><%= link_to testcase.assignee,user_path(testcase.assignee_id) %></td>
+    <td><%= testcase.somethingChanged %></td>
+    <td><%= testcase.flagged %></td>
+    <td><%= link_to 'Show', testcase %></td>
+    <td><%= link_to 'Edit', edit_testcase_path(testcase) %></td>
+    <td><%= link_to 'Destroy', testcase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Testcase', new_testcase_path %>

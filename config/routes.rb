@@ -1,6 +1,7 @@
 Caterpillar::Application.routes.draw do
   resources :users
   resources :scenarios
+  resources :testcases
 
   root :to => "scenarios#index"
   

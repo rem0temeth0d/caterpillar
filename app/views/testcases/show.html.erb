@@ -1,0 +1,35 @@
+<div class='center'>
+<h2> Showing Testcase </h2>
+</div>
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Scenario:</b>
+  <%= @testcase.scenarios_id %>
+</p>
+
+<p>
+  <b>Testcase:</b>
+  <%= @testcase.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @testcase.status %>
+</p>
+
+<p>
+  <b>Assignee:</b>
+  <%= @testcase.assignee %>
+</p>
+<p>
+  <b>Something Changed:</b>
+  <%= @testcase.somethingChanged %>
+</p>
+<p>
+  <b>Flagged:</b>
+  <%= @testcase.flagged %>
+</p>
+
+
+<%= link_to 'Edit', edit_testcase_path(@testcase) %> |
+<%= link_to 'Back', testcases_path %>

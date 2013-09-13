@@ -28,3 +28,8 @@ Technology Usage:
 2. Rails MVC was exploited thoroughly, except for relations and validations.
 3. Stylesheets and templates for layouts were used sparringly.
 4. Routes configured were very basic.
+
+References:
+1. Style Sheet Hints and Bits: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+2. Assets: https://www.iconfinder.com/free_icons
+3. Rails Related bits: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html

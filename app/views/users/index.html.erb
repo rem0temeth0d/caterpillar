@@ -5,9 +5,9 @@
     <th>Name</th>
     <th>Email</th>
     <th>Usertype</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
 <% @users.each do |user| %>
@@ -15,13 +15,13 @@
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.userType %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td align="center"><%= link_to image_tag("show_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), user %></td>
+    <td align="center"><%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_user_path(user) %></td>
+    <td align="center"><%= link_to image_tag("delete_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Delete"), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to image_tag("new_bw_icon.png", :border => 0,:alt => "New User"), new_user_path %> New User

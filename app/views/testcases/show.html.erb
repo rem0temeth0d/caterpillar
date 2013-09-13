@@ -1,35 +1,52 @@
 <div class='center'>
 <h2> Showing Testcase </h2>
 </div>
+<table>
 <p id="notice"><%= notice %></p>
-<p>
-  <b>Scenario:</b>
-  <%= @testcase.scenarios_id %>
-</p>
 
-<p>
-  <b>Testcase:</b>
-  <%= @testcase.name %>
-</p>
+<tr>
+  <td><b>Id:</b></td>
+  <td><%= @testcase.id %></td>
+</tr>
+<tr>
+  <td><b>Testcase:</b></td>
+  <td><%= @testcase.name %></td>
+</tr>
 
-<p>
-  <b>Status:</b>
-  <%= @testcase.status %>
-</p>
+<tr>
+  <td><b>Scenario:</b></td>
+  <td><%= @testcase.scenarios_id %>  : <%= Scenario.find(@testcase.id).name %></td>
+</tr>
 
-<p>
-  <b>Assignee:</b>
-  <%= @testcase.assignee %>
-</p>
-<p>
-  <b>Something Changed:</b>
-  <%= @testcase.somethingChanged %>
-</p>
-<p>
-  <b>Flagged:</b>
-  <%= @testcase.flagged %>
-</p>
+<tr>
+  <td><b>Status:</b></td>
+  <td><%= @testcase.status %></td>
+</tr>
 
-
-<%= link_to 'Edit', edit_testcase_path(@testcase) %> |
-<%= link_to 'Back', testcases_path %>
+<tr>
+  <td><b>Assignee:</b></td>
+  <td><%= @testcase.assignee %></td>
+</tr>
+<tr>
+  <td><b>Something Changed:</b></td>
+  <td><% if (@testcase.somethingChanged) %>
+  			<%= image_tag("ticked_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Yes") %>
+  		<% else %>
+  		 	<%= image_tag("crossed_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "No")  %>
+  		<% end %>
+ </td>
+</tr>
+<tr>
+  <td><b>Flagged:</b></td>
+  <td><% if (@testcase.flagged) %>
+  			<%= image_tag("ticked_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Yes") %>
+  		<% else %>
+  		 	<%= image_tag("crossed_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "No")  %>
+  		<% end %>
+  </td>
+</tr>
+</table>
+<div class='center'>
+<%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_testcase_path(@testcase) %> Edit |
+<%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), testcases_path %> Back 
+</div>

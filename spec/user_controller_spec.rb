@@ -1,8 +1,8 @@
-require './spec_helper.rb'
+require 'spec_helper'
 require 'rails'
 require 'rspec'
 require 'rspec-rails'
-require '../app/controllers/application_controller.rb'
+require 'application_controller'
 require '../app/controllers/users_controller.rb'
 
 describe UsersController do

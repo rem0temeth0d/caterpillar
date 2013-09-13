@@ -1,20 +1,26 @@
+<div class="center">
+<h2>Showing User</h2>
+</div>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<table>
+<tr>
+  <td><b>Name:</b></td>
+  <td><%= @user.name %></td>
+</tr>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<tr>
+  <td><b>Email:</b></td>
+  <td><%= @user.email %></td>
+</tr>
 
-<p>
-  <b>Usertype:</b>
-  <%= @user.userType %>
-</p>
+<tr>
+  <td><b>Usertype:</b></td>
+  <td><%= @user.userType %></td>
+</tr>
+</table>
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="center">
+<%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_user_path(@user) %> Edit |
+<%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Back"), users_path %> Back
+</div>

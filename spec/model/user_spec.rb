@@ -1,4 +1,4 @@
-require 'user'
+require 'spec_helper'
 require 'rspec'
 
 describe User do

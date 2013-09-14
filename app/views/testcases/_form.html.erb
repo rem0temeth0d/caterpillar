@@ -12,7 +12,7 @@
   <% end %>
   <div class="field">
     <%= f.label :scenario %><br />
-    <%= f.select :scenarios_id,@scenarios %>
+    <%= f.collection_select(:scenarios_id,@scenarios,:id,:name) %>
   </div>
   <div class="field">
     <%= f.label "Test Case" %><br />

@@ -1,4 +1,4 @@
-class ScenariosController  < ApplicationController
+class ScenariosController  < AuthorizedApplicationController
   def index
     @scenarios = Scenario.all
     
@@ -38,6 +38,7 @@ class ScenariosController  < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @scenario }
+      format.xml { render xml: @scenario }
     end
   end
   def edit

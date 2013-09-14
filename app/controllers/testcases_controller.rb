@@ -1,4 +1,4 @@
-class TestcasesController  < ApplicationController
+class TestcasesController  < AuthorizedApplicationController
   def index
     @testcases = Testcase.all
     
@@ -40,9 +40,11 @@ class TestcasesController  < ApplicationController
   def show
     @testcase = Testcase.find(params[:id])
 
+    @testcase.methods
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @testcase }
+      format.xml { render xml: @testcase }
     end
   end
   def edit

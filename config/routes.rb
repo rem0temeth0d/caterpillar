@@ -5,7 +5,8 @@ Caterpillar::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   
   match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/login',  to: 'sessions#login',            via: 'post'
+  match '/signin',  to: 'sessions#signin',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
     
   root :to => "scenarios#index"

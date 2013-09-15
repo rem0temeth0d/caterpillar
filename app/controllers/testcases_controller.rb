@@ -1,10 +1,16 @@
 class TestcasesController  < AuthorizedApplicationController
   def index
-    @testcases = Testcase.all
+    if(params[:scenario_id]) 
+      @testcases = Testcase.where(:scenario_id  => params[:scenario_id])
+    else
+      @testcases = Testcase.all
+    end
+    
     
     respond_to do |format|
        format.html # index.html.erb
        format.json { render json: @testcases }
+       format.xml { render xml: @testcases }
      end
   end
   def new
@@ -21,11 +27,12 @@ class TestcasesController  < AuthorizedApplicationController
     respond_to do |format|
        format.html # new.html.erb
        format.json { render json: @testcase }
+       format.xml { render xml: @testcase }
      end
   end
   def create
       @testcase = Testcase.new(params[:testcase])
-      scenario = Scenario.find(params[:testcase][:scenarios_id])
+      scenario = Scenario.find(params[:testcase][:scenario_id])
       @testcase.scenario =  scenario 
       respond_to do |format|
         if @testcase.save

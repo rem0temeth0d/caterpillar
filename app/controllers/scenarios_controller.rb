@@ -5,6 +5,7 @@ class ScenariosController  < AuthorizedApplicationController
     respond_to do |format|
        format.html # index.html.erb
        format.json { render json: @scenarios }
+       format.xml { render xml: @scenarios }
      end
   end
   def new
@@ -17,6 +18,7 @@ class ScenariosController  < AuthorizedApplicationController
     respond_to do |format|
        format.html # new.html.erb
        format.json { render json: @scenario }
+       format.xml { render xml: @scenario }
      end
   end
   def create

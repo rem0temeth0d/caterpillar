@@ -15,7 +15,7 @@
 
 <tr>
   <td><b>Scenario:</b></td>
-  <td><%= @testcase.scenarios_id %>  : <%= Scenario.find(@testcase.id).name %></td>
+  <td><%= @testcase.scenario_id %>  : <%= Scenario.find(@testcase.id).name %></td>
 </tr>
 
 <tr>
@@ -48,5 +48,5 @@
 </table>
 <div class='center'>
 <%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_testcase_path(@testcase) %> Edit |
-<%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), testcases_path %> Back 
+<%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), testcases_path %> Testcases 
 </div>

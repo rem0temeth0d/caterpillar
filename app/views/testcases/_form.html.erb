@@ -1,7 +1,7 @@
 <%= form_for(@testcase) do |f| %>
   <% if @testcase.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@testcase.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@testcase.errors.count, "error") %> prohibited this testcase from being saved:</h2>
 
       <ul>
       <% @testcase.errors.full_messages.each do |msg| %>
@@ -11,8 +11,8 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :scenario %><br />
-    <%= f.collection_select(:scenarios_id,@scenarios,:id,:name) %>
+    <%= f.label :scenario_id %><br />
+    <%= f.select :scenario_id,Scenario.all.collect{|s| [s.name,s.id]} %>
   </div>
   <div class="field">
     <%= f.label "Test Case" %><br />
@@ -24,7 +24,7 @@
   </div>
   <div class="field">
     <%= f.label :assignee %><br />
-    <%= f.select :assignee,@userNames %>
+    <%= f.select :assignee,User.all.collect{|u| [u.name,u.name]} %>
   </div>
   <div class="field">
     <%= f.label "Something Changed" %><br />

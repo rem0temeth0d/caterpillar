@@ -2,12 +2,13 @@ Caterpillar::Application.routes.draw do
   resources :users
   resources :scenarios
   resources :testcases
-  resources :sessions, only: [:new, :create, :destroy]
+#  resources :sessions, only: [:new, :create, :destroy]
   
   match '/signup',  to: 'users#new',            via: 'get'
   match '/login',  to: 'sessions#login',            via: 'post'
   match '/signin',  to: 'sessions#signin',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/scenario_cases/:scenario_id', to: 'testcases#index', via: 'get'
     
   root :to => "scenarios#index"
   

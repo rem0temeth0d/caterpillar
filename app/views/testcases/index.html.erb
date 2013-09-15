@@ -17,7 +17,7 @@
   <tr>
     <td><%= testcase.id %></td>
     <td><%= testcase.name %></td>
-    <td><%= testcase.scenarios_id %></td>
+    <td><%= testcase.scenario_id %></td>
     <td><%= testcase.status %></td>
     <td><%= link_to testcase.assignee,user_path(testcase.assignee_id) %></td>
     <td align="center"><% if (testcase.somethingChanged) %>

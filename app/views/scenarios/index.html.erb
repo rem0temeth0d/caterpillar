@@ -7,6 +7,7 @@
     <th>Feature</th>
     <th>Status</th>
     <th>Assignee</th>
+    <th>Testcases</th>
     <th>Show</th>
     <th>Edit</th>
     <th>Delete</th>
@@ -19,6 +20,11 @@
     <td><%= scenario.feature %></td>
     <td><%= scenario.status %></td>
     <td><%= link_to scenario.assignee,user_path(scenario.assignee_id) %></td>
+    <td align="center"><% if(scenario.testcases.any?) %>
+    		<%=link_to(scenario.testcases.length, "/scenario_cases/#{scenario.id}") %>
+    	<% else %>
+    		- 
+    	<%end%></td>
     <td align="center"><%= link_to image_tag("show_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), scenario %></td>
     <td align="center"><%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_scenario_path(scenario) %></td>
     <td align="center"><%= link_to image_tag("delete_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Delete"), scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

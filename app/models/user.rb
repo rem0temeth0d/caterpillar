@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password_digest, :userType
   attr_readonly :id
   
-  has_secure_password
+#  has_secure_password
 end

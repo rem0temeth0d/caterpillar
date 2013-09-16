@@ -25,6 +25,16 @@
 			$( "#opener" ).click(function() {
 				$( "#dialog" ).dialog( "open" );
 			});
+			
+			$('#new_scenario').on('ajax:error', function(event, xhr, status) {
+				alert(xhr.responseText)
+				//  $(this).append(xhr.responseText)
+			});
+
+			$('#new_scenario').on('ajax:success', function(event, xhr, status) {
+				alert(xhr.responseText)
+				//  $(this).append(xhr.responseText)
+			});
 		});
 	</script>
 </head>

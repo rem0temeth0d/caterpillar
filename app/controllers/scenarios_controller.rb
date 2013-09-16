@@ -27,6 +27,7 @@ class ScenariosController  < AuthorizedApplicationController
       respond_to do |format|
         if @scenario.save
           format.html { redirect_to @scenario, notice: 'Scenario was successfully created.' }
+          format.js   { }
           format.json { render json: @scenario, status: :created, location: @scenario }
         else
           format.html { render action: "new" }

@@ -17,16 +17,13 @@ The tools has the following functionality as explained in the mock-ups.
 7. User management was added.
 8. Sign Up was added.
 9. XML API for viewing records and lists of records for all models. (XML API for exposed for actions index,new,show)
-
+10. Tests Driven Development was achieved partially because RSpec setup took significant time. Unit Tests are added and passing. Functional and Integration Tests added but FAILING.
+11. Ajax based forms were implemented but the on-success message is not showing up.
 
 Following features could not be accomplished:
 -------------------------
-1. Tests Driven Development couldn't be achieved because RSpec setup took a lot
-of time was still not functional.
-2. Heroku deployment kept failing after the DB was added.
-3. Ajax based forms were not implemented.
-4. Signin feature was introduced but disabled due to a lot of issues. There is /signin but users are not forced to authenticate themselves to use the features.
-
+1. Heroku deployment kept failing after the DB was added.
+2. Signin feature was introduced but disabled due to a lot of issues. There is /signin but users are not forced to authenticate themselves to use the features.
 
 Technology Usage:
 -------------------------
@@ -44,4 +41,7 @@ References:
 2. Image Assets were downloaded from https://www.iconfinder.com/free_icons The content on this site is freely available for download and usage.
 3. Rails Related bits: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html
 4. JQuery JS Examples scripts were borrowed and modified to suite the website behavior. One example being http://jqueryui.com/dialog/#modal-form 
+5. Integration testing: https://www.relishapp.com/rspec/rspec-rails/docs/feature-specs/feature-spec
+6. Asset Pipeline: http://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directives
+7. Unobtrusive JavaScript and Coffee: https://github.com/rails/jquery-ujs/wiki/Unobtrusive-scripting-support-for-jQuery, https://github.com/rails/jquery-ujs/wiki/ajax
 

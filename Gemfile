@@ -31,4 +31,5 @@ group :test do
 	gem 'rspec'
 	gem 'sqlite3','1.3.7'
 	gem 'rspec-rails'
+	gem 'capybara', '> 2.0.0'
 end

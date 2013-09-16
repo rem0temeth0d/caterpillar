@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(:version => 20130914173833) do
     t.string   "assignee"
     t.boolean  "somethingChanged"
     t.boolean  "flagged"
-    t.integer  "scenarios_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.integer  "scenario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

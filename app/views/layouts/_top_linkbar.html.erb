@@ -8,11 +8,16 @@
       </nav>
       <nav>
         <div class="pull-right">
-       	<% user = User.find(1)%>
+       	<% 
+       	   if !User.all.empty?
+       		user = User.find(1)
+       	%>
+       	
         <%= image_tag("user_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "User")%><%= link_to user.name,user_path(user)%>&nbsp;(<%=user.userType%>)|
         <%= link_to image_tag("settings_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Logout"), users_path%> |
         <%= image_tag("out_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Logout")%>&nbsp;<%= link_to "Logout", '/signin' %></li>
-        </div>
+       <%end%>
+       </div>
       </nav>
     </div>
   </div>

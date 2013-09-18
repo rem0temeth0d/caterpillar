@@ -1,18 +1,27 @@
 class TestcasesController  < AuthorizedApplicationController
+  
   def index
-    if(params[:scenario_id]) 
-      @testcases = Testcase.where(:scenario_id  => params[:scenario_id])
-    else
-      @testcases = Testcase.all
-    end
+   @testcases = Testcase.all
+   
+   respond_to do |format|
+     format.html # index.html.erb
+     format.json { render json: @testcases }
+     format.xml { render xml: @testcases }
+   end
     
-    
-    respond_to do |format|
+  end
+  
+def selected
+  if(params[:scenario_id]) 
+    @testcases = Testcase.where(:scenario_id  => params[:scenario_id])
+     respond_to do |format|
        format.html # index.html.erb
        format.json { render json: @testcases }
        format.xml { render xml: @testcases }
      end
   end
+end
+
   def new
     @testcase = Testcase.new
     @scenarios = Array.new
@@ -30,6 +39,7 @@ class TestcasesController  < AuthorizedApplicationController
        format.xml { render xml: @testcase }
      end
   end
+  
   def create
       @testcase = Testcase.new(params[:testcase])
       scenario = Scenario.find(params[:testcase][:scenario_id])
@@ -89,6 +99,7 @@ class TestcasesController  < AuthorizedApplicationController
 
     respond_to do |format|
       format.html { redirect_to testcases_url }
+      format.js { redirect_to testcases_url  }
       format.json { head :no_content }
     end
   end

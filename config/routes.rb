@@ -8,7 +8,9 @@ Caterpillar::Application.routes.draw do
   match '/login',  to: 'sessions#login',                       via: 'post'
   match '/signin',  to: 'sessions#signin',                     via: 'get'
   match '/signout', to: 'sessions#destroy',                    via: 'delete'
-  match '/scenario_cases/:scenario_id', to: 'testcases#index', via: 'get'
+  match '/scenario_cases/:scenario_id', to: 'testcases#selected', via: 'get'
+  match '/testcases/delete/:id', to: 'testcases#destroy'          , via: 'delete'
+  match '/scenarios/delete/:id', to: 'scenarios#destroy'          , via: 'delete'
     
   root :to => "scenarios#index"
   

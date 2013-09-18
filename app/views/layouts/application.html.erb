@@ -9,34 +9,6 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	 <script>
-		$(function() {
-			$( "#dialog" ).dialog({
-				autoOpen: false,
-				show: {
-					effect: "blind",
-					duration: 1000
-				},
-				hide: {
-					effect: "explode",
-					duration: 1000
-				}
-			});
-			$( "#opener" ).click(function() {
-				$( "#dialog" ).dialog( "open" );
-			});
-			
-			$('#new_scenario').on('ajax:error', function(event, xhr, status) {
-				alert(xhr.responseText)
-				//  $(this).append(xhr.responseText)
-			});
-
-			$('#new_scenario').on('ajax:success', function(event, xhr, status) {
-				alert(xhr.responseText)
-				//  $(this).append(xhr.responseText)
-			});
-		});
-	</script>
 </head>
 <body>
 <h1>Caterpillar</h1> <h3>Collaborative Test Case Design Portal for Agile Teams</h3>

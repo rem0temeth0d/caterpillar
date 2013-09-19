@@ -14,8 +14,12 @@
 	width: 16px;
 }
 
-table {
+.mainContentTable {
 	width: 970px;
+}
+
+.popupContentTable {
+	width: 700px;
 }
 
 td,th {
@@ -78,6 +82,15 @@ h3 {
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+h4 {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: left;
   font-weight: normal;
   color: #999;
 }

@@ -1,3 +1,8 @@
+<%= render 'layouts/top_linkbar' %>
+<div class="container">
+<!-- putt the html below this line -->
+
+
 <div class="center">
 <h2>Showing User</h2>
 </div>
@@ -24,3 +29,8 @@
 <%= link_to image_tag("edit_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Edit"), edit_user_path(@user) %> Edit |
 <%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Back"), users_path %> Users
 </div>
+
+
+<!-- putt the html above this line -->
+</div>
+<%= render 'layouts/bottom_linkbar' %>

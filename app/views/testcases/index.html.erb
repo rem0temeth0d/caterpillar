@@ -1,5 +1,11 @@
+<%= render 'layouts/top_linkbar' %>
+<div class="container">
+<!-- putt the html below this line -->
+
+
+
 <h2>Test Cases</h2>
-<table>
+<table class="mainContentTable">
   <tr>
     <th>Id</th>
     <th>Test Case</th>
@@ -42,3 +48,9 @@
 <br />
 
 <%= link_to image_tag("new_bw_icon.png", :border => 0,:alt => "New"), new_testcase_path %> New Testcase
+
+
+
+<!-- putt the html above this line -->
+</div>
+<%= render 'layouts/bottom_linkbar' %>

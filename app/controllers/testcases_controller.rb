@@ -12,7 +12,8 @@ class TestcasesController  < AuthorizedApplicationController
   end
   
 def selected
-  if(params[:scenario_id]) 
+  if(params[:scenario_id])
+    @scenario = Scenario.find(params[:scenario_id])
     @testcases = Testcase.where(:scenario_id  => params[:scenario_id])
      respond_to do |format|
        format.html # index.html.erb

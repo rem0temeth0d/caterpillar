@@ -1,3 +1,7 @@
+<%= render 'layouts/top_linkbar' %>
+<div class="container">
+<!-- putt the html below this line -->
+
 <h2>Editing Scenario</h2>
 <div class="center">
 <%= render 'form' %>
@@ -5,3 +9,9 @@
 <%= link_to image_tag("show_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Show"), @scenario %> Show|
 <%= link_to image_tag("back_bw_icon.png", :border => 0,:class => "actionIcon",:alt => "Back"), scenarios_path %>Scenarios 
 </div>
+
+
+
+<!-- putt the html above this line -->
+</div>
+<%= render 'layouts/bottom_linkbar' %>

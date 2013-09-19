@@ -8,22 +8,22 @@ Features Accomplished:
 -------------------------
 The tools has the following functionality as explained in the mock-ups.
 
-1. User can add/edit/delete Test Scenarios
-2. User can add/edit/delete Test Cases
-3. User can add/edit/delete Users
-4. Website has black and white theme with minimalistic styling accomplished.
-5. Many basic Validations have been added to the forms. No complex rules.
+1. User can __add/edit/delete Test Scenarios__
+2. User can __add/edit/delete Test Cases__
+3. User can __add/edit/delete Users__
+4. Website has __black and white theme__ with __minimalistic styling__ accomplished.
+5. Many basic __Validations__ have been added to the forms. No complex rules.
 6. It was understood that DB Level FK was not required so continued with ActiveRecord relationships, without modifying db to have a SQL FK Constraint.
-7. User management was added.
-8. Sign Up was added.
-9. XML API for viewing records and lists of records for all models. (XML API for exposed for actions index,new,show)
-10. Tests Driven Development was achieved partially because RSpec setup took significant time. Unit Tests are added and passing. Functional and Integration Tests added but FAILING.
-11. AJAX was implemented to show the child records belonging to a parent by fetching child records based on parent id. server request.
-12. AJAX call implemented allows change of parent without navigating away from the page or the dialog, by simply refreshing the content based on the parent selected. This demonstrates the usability advantages of using AJAX based server calls.
+7. User management available.
+8. Primitive Sign Up available.
+9. __XML API__ for viewing records and lists of records for all models. (_XML API for exposed for actions index,new,show_)
+10. __Tests Driven Development__ was achieved partially because RSpec setup took significant time. Unit Tests are added and passing. Functional and Integration Tests added but FAILING.
+11. __AJAX__ was implemented to show the child records belonging to a parent by fetching child records based on parent id. server request.
+12. __AJAX call__ implemented allows change of parent without navigating away from the page or the dialog, by simply refreshing the content based on the parent selected. This demonstrates the usability advantages of using AJAX based server calls.
 
 Data Model:
 -------------------------
-Scenario and Testcase are the models in this domain with the relationship of one-to-many from Secnario to Testcase. A scenario can have multiple test cases and a test case can belong to only one scenario. Testcase has a column Scenario Id that points to the scenario it belongs to.
+__Scenario__ and __Testcase__ are the models in this domain with the relationship of one-to-many from Secnario to Testcase. A scenario can have multiple test cases and a test case can belong to only one scenario. Testcase has a column Scenario Id that points to the scenario it belongs to.
 
 #### Relationship
 __One-To-Many__
@@ -55,7 +55,7 @@ Technology Usage:
 1. Git was used extensively.
 2. Rails MVC was exploited as thoroughly as possible.
 3. Stylesheets and templates for layouts were used minimally.
-4. Ajax was attempted using JQuery (not fully functional.)
+4. Ajax was attempted using JQuery (limited usage)
 5. Heroku deployment was attempted (failing for db.)
 6. Session management attempted (failing signin.)
 7. Rails ActiveRecord pattern was used models (along with incremental migrations, relations and validations)

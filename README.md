@@ -4,7 +4,7 @@ caterpillar
 ROR - Test Case Management Tool
 =========================
 
-Features Done:
+Features Accomplished:
 -------------------------
 The tools has the following functionality as explained in the mock-ups.
 
@@ -18,12 +18,37 @@ The tools has the following functionality as explained in the mock-ups.
 8. Sign Up was added.
 9. XML API for viewing records and lists of records for all models. (XML API for exposed for actions index,new,show)
 10. Tests Driven Development was achieved partially because RSpec setup took significant time. Unit Tests are added and passing. Functional and Integration Tests added but FAILING.
-11. Ajax based forms were implemented but the on-success message is not showing up.
+11. AJAX was implemented to show the child records belonging to a parent by fetching child records based on parent id. server request.
+12. AJAX call implemented allows change of parent without navigating away from the page or the dialog, by simply refreshing the content based on the parent selected. This demonstrates the usability advantages of using AJAX based server calls.
+
+Data Model:
+-------------------------
+Scenario and Testcase are the models in this domain with the relationship of one-to-many from Secnario to Testcase. A scenario can have multiple test cases and a test case can belong to only one scenario. Testcase has a column Scenario Id that points to the scenario it belongs to.
+
+#### Relationship
+__One-To-Many__
+> Scenario 1:* Testcase
+
+### Scenario
+
+Id   | Name    | Feature | Status | Assignee |
+-----| ------- | ------- | ------ | -------- |
+1    | XYZ     | 1232    | OPEN   | John     |
+2    | XYZ     | 1232    | COMPLETE| Mary |
+
+### Testcase
+
+Id   | Name    | Feature | Status | Assignee |Something Changed |Flagged  |Scenario Id  |
+-----| ------- | ------- | ------ | -------- |----------------  |-------- |-------------|
+1    | XYZ     | 1232    | OPEN   | John     |True              |False    |1            |
+2    | XYZ     | 1232    | COMPLETE| Mary    |False             |False    |2            |
+
+
 
 Following features could not be accomplished:
 -------------------------
-1. Heroku deployment kept failing after the DB was added.
-2. Signin feature was introduced but disabled due to a lot of issues. There is /signin but users are not forced to authenticate themselves to use the features.
+1. Heroku deployment successful but not 100% reliable. DB has been casuing a lot of trouble.
+2. Sign-In feature was introduced but disabled due to a lot of issues. There is /signin route but users are not forced to authenticate themselves to use the features of this website.
 
 Technology Usage:
 -------------------------

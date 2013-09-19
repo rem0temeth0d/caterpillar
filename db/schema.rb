@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130914173833) do
+ActiveRecord::Schema.define(:version => 20130916082938) do
 
   create_table "scenarios", :force => true do |t|
     t.text     "name",       :limit => 255
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20130914173833) do
     t.string   "userType"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "password_digest"
+    t.string   "password"
   end
 
 end
